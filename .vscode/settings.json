@@ -1,0 +1,6 @@
+{
+    "C_Cpp.default.compilerPath": "/usr/local/cuda-12.4/bin/nvcc",
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}
