@@ -1,5 +1,5 @@
 compile:
-	g++ -O3 image_inversion_cpu.cpp -o cpu_inversion 
-	/usr/local/cuda-12.4/bin/nvcc image_inversion_gpu.cu -O3 -arch=sm_61 -gencode=arch=compute_61,code=sm_61 -o gpu_inversion
+	g++ -x c++ image_inversion_cpu_and_gpu.cu -O3 -o cpu_inversion.elf
+	/usr/local/cuda-12.4/bin/nvcc image_inversion_cpu_and_gpu.cu -O3 --extended-lambda -o gpu_inversion.elf
 clean:
 	rm cpu_inversion gpu_inversion
